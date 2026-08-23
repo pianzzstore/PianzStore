@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PianzStore | Akun FF, Nokos, Top Up & Desain</title>
+    <!-- Google Fonts untuk font modern -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #7c3aed;
+        }
+        .nav-btn {
+            background: #7c3aed;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .nav-btn:hover {
+            background: #6d28d9;
+            transform: translateY(-2px);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 span {
+            color: #7c3aed;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* GRID PRODUK */
+        .catalog-container {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* CARD PRODUK */
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px -3px rgba(124, 58, 237, 0.1);
+        }
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background: #e2e8f0;
+            position: relative;
+        }
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #7c3aed;
+            color: white;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-transform: uppercase;
+        }
+        .badge.game { background: #ea580c; }
+        .badge.nokos { background: #0284c7; }
+        .badge.topup { background: #16a34a; }
+
+        .card-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .card-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+        .price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .buy-btn {
+            background: #25d366;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+        .buy-btn:hover {
+            background: #128c7e;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">PianzStore.</div>
+            <a href="intent://send?phone=6287842450191#Intent;scheme=whatsapp;package=com.whatsapp;end" class="nav-btn">Hubungi Admin</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Welcome to <span>PianzStore</span></h1>
+        <p>Penyedia Akun Game, Nokos All Negara, Layanan Top Up, dan Jasa Desain Canva Profesional Terpercaya.</p>
+    </section>
+
+    <!-- CATALOG SECTION -->
+    <main class="catalog-container">
+        <div class="grid">
+            
+            <!-- PRODUK 1: FREE FIRE -->
+            <div class="card">
+                <div class="card-img">
+                    <span class="badge game">Game</span>
+                    <img src="https://unsplash.com" alt="Free Fire Account">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Akun Free Fire (FF)</div>
+                    <div class="card-desc">Sedia berbagai pilihan akun FF spek sultan, semi-sultan, maupun akun tumbal. Aman, legal, dan anti-hackback.</div>
+                    <div class="card-footer">
+                        <div class="price">Cek Spek</div>
+                        <a href="intent://send?phone=6287842450191#Intent;scheme=whatsapp;package=com.whatsapp;end" class="buy-btn">Tanya Stok</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUK 2: NOKOS -->
+            <div class="card">
+                <div class="card-img">
+                    <span class="badge nokos">Nokos</span>
+                    <img src="https://unsplash.com" alt="Nokos All Negara">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Nokos All Negara</div>
+                    <div class="card-desc">Nomor Kosong (Nokos) untuk verifikasi OTP aplikasi (WhatsApp, Telegram, dll) dari berbagai negara pilihan. Proses cepat.</div>
+                    <div class="card-footer">
+                        <div class="price">Mulai Rp 5k</div>
+                        <a href="intent://send?phone=6287842450191#Intent;scheme=whatsapp;package=com.whatsapp;end" class="buy-btn">Order WA</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUK 3: TOP UP -->
+            <div class="card">
+                <div class="card-img">
+                    <span class="badge topup">Top Up</span>
+                    <img src="https://unsplash.com" alt="Top Up Game">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Top Up Game & E-Wallet</div>
+                    <div class="card-desc">Layanan isi ulang Diamond Free Fire, Mobile Legends, Genshin, serta saldo e-wallet murah, instan, dan terpercaya.</div>
+                    <div class="card-footer">
+                        <div class="price">List Harga</div>
+                        <a href="intent://send?phone=6287842450191#Intent;scheme=whatsapp;package=com.whatsapp;end" class="buy-btn">Cek Harga</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUK 4: DESIGN ALL -->
+            <div class="card">
+                <div class="card-img">
+                    <span class="badge">Design</span>
+                    <img src="https://unsplash.com" alt="Design Canva">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Jasa Desain All (Canva)</div>
+                    <div class="card-desc">Menerima segala macam kebutuhan desain: Feed IG, Banner, Logo, PPT, CV, Menu Makanan, hingga Undangan Digital.</div>
+                    <div class="card-footer">
+                        <div class="price">Murah & Cepat</div>
+                        <a href="intent://send?phone=6287842450191#Intent;scheme=whatsapp;package=com.whatsapp;end" class="buy-btn">Order Desain</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 PianzStore. All Rights Reserved | Trusted Digital Store.</p>
+    </footer>
+
+</body>
+</html>
